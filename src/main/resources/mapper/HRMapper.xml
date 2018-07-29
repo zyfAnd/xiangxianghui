@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yanfu.dao.HRDao">
+    <resultMap id="BaseResultMap" type="com.yanfu.model.base.BaseInfo">
+        <result column="title" property="title" />
+        <result column="content" property="content" />
+        <result column="image" property="imageUrl" />
+    </resultMap>
+    <select id="findAll" resultMap="BaseResultMap" >
+        select
+        title ,
+        content ,
+        image
+        from t_hr
+    </select>
+
+</mapper>
